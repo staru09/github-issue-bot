@@ -2,7 +2,7 @@ const steps = [
   {
     step: "01",
     title: "Fetch",
-    desc: "CLI pulls issues via gh — titles, bodies, labels, all of it.",
+    desc: "CLI pulls issues via gh: titles, bodies, labels, all of it.",
     color: "bg-accent-subtle",
   },
   {
@@ -14,7 +14,7 @@ const steps = [
   {
     step: "03",
     title: "Explore",
-    desc: "Upload digest.json — browse overview and issues in the dashboard.",
+    desc: "Upload digest.json. Browse overview and issues in the dashboard.",
     color: "bg-success-subtle",
   },
 ];

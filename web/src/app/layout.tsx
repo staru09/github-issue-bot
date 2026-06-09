@@ -1,17 +1,17 @@
 import type { Metadata } from "next";
 import Script from "next/script";
-import { Syne } from "next/font/google";
+import { Montserrat } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 
-const syne = Syne({
+const montserrat = Montserrat({
   subsets: ["latin"],
-  weight: ["700", "800"],
-  variable: "--font-display",
+  weight: ["400", "500", "600", "700", "800", "900"],
+  variable: "--font-montserrat",
 });
 
 export const metadata: Metadata = {
-  title: "Issue Analyser — Stop scrolling. Start contributing.",
+  title: "Issue Analyser | Stop scrolling. Start contributing.",
   description: "Neo-brutalist GitHub issue intelligence. Snapshot, themes, ranked picks, and full catalog.",
 };
 
@@ -33,13 +33,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${syne.variable} h-full`} suppressHydrationWarning>
+    <html lang="en" className={`${montserrat.variable} h-full font-sans`} suppressHydrationWarning>
       <head>
         <Script id="theme-init" strategy="beforeInteractive">
           {themeInitScript}
         </Script>
       </head>
-      <body className="min-h-full flex flex-col bg-background text-foreground antialiased">
+      <body className="min-h-full flex flex-col bg-background font-sans text-foreground antialiased">
         <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>

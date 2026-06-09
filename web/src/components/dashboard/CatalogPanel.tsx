@@ -27,7 +27,7 @@ function IssueCardView({
             rel="noopener noreferrer"
             className="hover:text-accent hover:underline"
           >
-            #{issue.number} — {issue.title}
+            #{issue.number}: {issue.title}
           </a>
         </CardTitle>
       </CardHeader>

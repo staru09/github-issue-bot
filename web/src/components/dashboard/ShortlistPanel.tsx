@@ -32,7 +32,7 @@ export function ShortlistPanel({ items }: { items: ShortlistItem[] }) {
                     rel="noopener noreferrer"
                     className="hover:text-accent hover:underline"
                   >
-                    #{item.number} — {item.title}
+                    #{item.number}: {item.title}
                   </a>
                 </CardTitle>
                 <div className="flex flex-wrap gap-1.5">

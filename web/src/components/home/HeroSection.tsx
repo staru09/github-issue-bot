@@ -4,7 +4,7 @@ import Link from "next/link";
 import { HeroPreview } from "@/components/home/HeroPreview";
 import { buttonVariants } from "@/components/retroui/Button";
 import { cn } from "@/lib/utils";
-import { ArrowRight, Terminal } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 export function HeroSection() {
   return (
@@ -23,12 +23,14 @@ export function HeroSection() {
         <div className="space-y-8">
           <div className="space-y-4">
             <h1 className="hero-title text-4xl font-black leading-[1.05] tracking-tight text-foreground sm:text-5xl lg:text-6xl">
-              Stop scrolling.
+              Stop
+              <br />
+              scrolling.
               <br />
               <span className="text-accent">Start contributing.</span>
             </h1>
             <p className="max-w-lg text-base leading-relaxed text-muted-foreground sm:text-lg">
-              Turn hundreds of GitHub issues into a clear digest — snapshot,
+              Turn hundreds of GitHub issues into a clear digest: snapshot,
               themes, ranked picks, and a full catalog. Built for maintainers
               and newcomers alike.
             </p>
@@ -48,16 +50,6 @@ export function HeroSection() {
             >
               See it live
             </Link>
-          </div>
-
-          <div className="neo-card max-w-md rounded-lg border-2 border-border bg-muted/30 p-4">
-            <div className="mb-2 flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-muted-foreground">
-              <Terminal className="h-3.5 w-3.5" />
-              One command
-            </div>
-            <code className="block font-mono text-xs leading-relaxed text-foreground sm:text-sm">
-              npm run dev -- analyze vercel/next.js --limit 20
-            </code>
           </div>
         </div>
 

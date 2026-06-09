@@ -4,7 +4,7 @@ const features = [
   {
     icon: BarChart3,
     title: "Snapshot",
-    desc: "Instant health read — work types, difficulty, readiness at a glance.",
+    desc: "Instant health read: work types, difficulty, readiness at a glance.",
     accent: "bg-accent-subtle text-accent border-accent-border",
     rotate: "rotate-[-1deg]",
   },
@@ -18,14 +18,14 @@ const features = [
   {
     icon: Target,
     title: "Start here",
-    desc: "Top 5 ranked issues for new contributors — with a clear reason to pick each.",
+    desc: "Top 5 ranked issues for new contributors, with a clear reason to pick each.",
     accent: "bg-success-subtle text-success border-success-border",
     rotate: "rotate-[-2deg]",
   },
   {
     icon: Sparkles,
     title: "Catalog",
-    desc: "Every issue as a card — searchable, filterable, grouped by taxonomy.",
+    desc: "Every issue as a card: searchable, filterable, grouped by taxonomy.",
     accent: "bg-warning-subtle text-warning border-warning-border",
     rotate: "rotate-[2deg]",
   },
