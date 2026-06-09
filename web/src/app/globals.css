@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-/* GitHub-inspired palette + RetroUI brutalist shadows */
+/* GitHub-inspired light palette + RetroUI brutalist shadows */
 :root {
   --background: #ffffff;
   --foreground: #1f2328;
@@ -10,22 +10,64 @@
   --primary: #1f883d;
   --primary-hover: #1a7f37;
   --primary-foreground: #ffffff;
+  --primary-border: #1a7f37;
   --secondary: #f6f8fa;
   --secondary-hover: #eef1f4;
   --secondary-foreground: #1f2328;
   --accent: #0969da;
   --accent-foreground: #ffffff;
   --accent-subtle: #ddf4ff;
+  --accent-border: #0550ae;
   --danger: #cf222e;
   --danger-subtle: #ffebe9;
+  --danger-border: #ffbbb9;
   --warning: #9a6700;
   --warning-subtle: #fff8c5;
+  --warning-border: #eac54f;
   --success: #1a7f37;
   --success-subtle: #dafbe1;
+  --success-border: #82c396;
   --purple: #8250df;
   --purple-subtle: #fbefff;
+  --purple-border: #d8b9ff;
   --card: #ffffff;
   --shadow: #1f232820;
+  color-scheme: light;
+}
+
+/* GitHub dark dimmed palette */
+:root.dark {
+  --background: #0d1117;
+  --foreground: #e6edf3;
+  --muted: #161b22;
+  --muted-foreground: #8b949e;
+  --border: #30363d;
+  --primary: #238636;
+  --primary-hover: #2ea043;
+  --primary-foreground: #ffffff;
+  --primary-border: #238636;
+  --secondary: #161b22;
+  --secondary-hover: #21262d;
+  --secondary-foreground: #e6edf3;
+  --accent: #4493f8;
+  --accent-foreground: #ffffff;
+  --accent-subtle: #0d419d40;
+  --accent-border: #1f6feb;
+  --danger: #f85149;
+  --danger-subtle: #f8514926;
+  --danger-border: #f8514980;
+  --warning: #d29922;
+  --warning-subtle: #d2992226;
+  --warning-border: #d2992280;
+  --success: #3fb950;
+  --success-subtle: #3fb95026;
+  --success-border: #3fb95080;
+  --purple: #a371f7;
+  --purple-subtle: #a371f726;
+  --purple-border: #a371f780;
+  --card: #161b22;
+  --shadow: #00000040;
+  color-scheme: dark;
 }
 
 @theme inline {
@@ -54,6 +96,7 @@
   --color-card: var(--card);
   --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
   --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+  --font-display: var(--font-display, ui-sans-serif);
 }
 
 body {
@@ -62,8 +105,39 @@ body {
   font-family: var(--font-sans);
 }
 
-/* RetroUI-style focus ring using GitHub accent */
 *:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 2px;
+}
+
+/* Neo-brutalism utilities */
+.neo-card {
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+.neo-shadow-sm {
+  box-shadow: 3px 3px 0 0 var(--border);
+}
+
+.neo-sticker {
+  user-select: none;
+}
+
+.hero-grid {
+  background-color: var(--background);
+  background-image: radial-gradient(var(--border) 1.5px, transparent 1.5px);
+  background-size: 24px 24px;
+}
+
+.hero-title,
+.font-display {
+  font-family: var(--font-display), var(--font-sans);
+}
+
+.hero-title {
+  text-shadow: 3px 3px 0 var(--accent-subtle);
+}
+
+:root.dark .hero-title {
+  text-shadow: 3px 3px 0 var(--accent-subtle);
 }

@@ -8,13 +8,13 @@ export const buttonVariants = cva(
     variants: {
       variant: {
         default:
-          "bg-primary text-primary-foreground border-[#1a7f37] shadow-[2px_2px_0_0_#1a7f37] hover:translate-y-px hover:shadow-[1px_1px_0_0_#1a7f37] active:translate-y-0.5 active:shadow-none hover:bg-primary-hover",
+          "bg-primary text-primary-foreground border-[var(--primary-border)] shadow-[2px_2px_0_0_var(--primary-border)] hover:translate-y-px hover:shadow-[1px_1px_0_0_var(--primary-border)] active:translate-y-0.5 active:shadow-none hover:bg-primary-hover",
         secondary:
           "bg-secondary text-secondary-foreground border-border shadow-[2px_2px_0_0_var(--border)] hover:translate-y-px hover:bg-secondary-hover hover:shadow-[1px_1px_0_0_var(--border)] active:translate-y-0.5 active:shadow-none",
         outline:
           "bg-card text-foreground border-border shadow-[2px_2px_0_0_var(--border)] hover:translate-y-px hover:bg-muted hover:shadow-[1px_1px_0_0_var(--border)] active:translate-y-0.5 active:shadow-none",
         accent:
-          "bg-accent text-accent-foreground border-[#0550ae] shadow-[2px_2px_0_0_#0550ae] hover:translate-y-px hover:shadow-[1px_1px_0_0_#0550ae] active:translate-y-0.5 active:shadow-none",
+          "bg-accent text-accent-foreground border-[var(--accent-border)] shadow-[2px_2px_0_0_var(--accent-border)] hover:translate-y-px hover:shadow-[1px_1px_0_0_var(--accent-border)] active:translate-y-0.5 active:shadow-none",
         ghost: "border-transparent shadow-none hover:bg-muted",
         link: "border-transparent shadow-none text-accent underline-offset-4 hover:underline p-0",
       },

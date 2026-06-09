@@ -122,7 +122,8 @@ export interface FetchIssuesOptions {
 
 export interface AnalyzeOptions extends FetchIssuesOptions {
   format?: "markdown" | "json";
-  out?: string;
+  /** Override default output directory (digests/owner-repo/) */
+  outDir?: string;
   model?: string;
   apiKey?: string;
 }

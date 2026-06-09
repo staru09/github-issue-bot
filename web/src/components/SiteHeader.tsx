@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { GitBranch } from "lucide-react";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 export function SiteHeader() {
   return (
@@ -9,13 +10,20 @@ export function SiteHeader() {
           <GitBranch className="h-5 w-5 text-accent" />
           Issue Analyser
         </Link>
-        <nav className="flex items-center gap-4 text-sm">
+        <nav className="flex items-center gap-3 text-sm">
           <Link href="/" className="text-muted-foreground hover:text-accent">
+            Home
+          </Link>
+          <Link href="/#upload" className="text-muted-foreground hover:text-accent">
             Upload
           </Link>
           <Link href="/view?sample=1" className="text-muted-foreground hover:text-accent">
-            Sample digest
+            Overview
           </Link>
+          <Link href="/view/issues?sample=1" className="text-muted-foreground hover:text-accent">
+            Issues
+          </Link>
+          <ThemeToggle />
         </nav>
       </div>
     </header>

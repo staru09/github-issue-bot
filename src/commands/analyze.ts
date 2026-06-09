@@ -5,6 +5,11 @@ import { buildDigest } from "../classify/aggregator.js";
 import { OpenAiProvider, processBatches } from "../llm/provider.js";
 import { formatMarkdown } from "../output/formatMarkdown.js";
 import { formatJson } from "../output/formatJson.js";
+import {
+  ensureOutputDir,
+  outputFilePaths,
+  resolveOutputDir,
+} from "../output/paths.js";
 import { AnalyzeOptions } from "../types/issue.js";
 
 export type AnalyzeCommandOptions = Omit<
@@ -69,15 +74,17 @@ export async function runAnalyze(options: AnalyzeCommandOptions): Promise<string
   });
 
   const digest = buildDigest(repoSlug, normalized, batchResults, pass2);
-  const output =
-    options.format === "json"
-      ? formatJson(digest)
-      : formatMarkdown(digest);
+  const markdown = formatMarkdown(digest);
+  const json = formatJson(digest);
 
-  if (options.out) {
-    await writeFile(options.out, output, "utf8");
-    console.error(`Wrote digest to ${options.out}`);
-  }
+  const outDir = resolveOutputDir(repoSlug, options.outDir);
+  await ensureOutputDir(outDir);
+  const paths = outputFilePaths(outDir);
 
-  return output;
+  await writeFile(paths.markdown, markdown, "utf8");
+  await writeFile(paths.json, json, "utf8");
+  console.error(`Wrote ${paths.markdown}`);
+  console.error(`Wrote ${paths.json}`);
+
+  return options.format === "json" ? json : markdown;
 }

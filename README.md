@@ -24,16 +24,17 @@ npm run build
 
 ```bash
 # Analyze open issues (default limit: 50)
+# Always writes digests/owner-repo/digest.md and digest.json
 npm run dev -- analyze vercel/next.js
 
 # Limit issues and filter by label
 npm run dev -- analyze vercel/next.js --limit 10 --label "good first issue"
 
-# Save markdown digest to file
-npm run dev -- analyze vercel/next.js --limit 20 --out digest.md
+# Custom output directory
+npm run dev -- analyze vercel/next.js --limit 20 --out-dir ./my-output
 
-# JSON output for dashboard
-npm run dev -- analyze vercel/next.js --limit 10 --format json --out digest.json
+# Print JSON to stdout instead of markdown
+npm run dev -- analyze vercel/next.js --limit 10 --format json
 ```
 
 ## Web dashboard
@@ -48,11 +49,12 @@ npm run web:dev
 # Upload digest.json or click "View sample digest"
 ```
 
-Generate JSON from the CLI, then upload it in the dashboard:
+Run analysis (exports both files automatically), then open the dashboard:
 
 ```bash
-npm run dev -- analyze genesis-kb/transcription_engine --limit 10 --format json --out digest.json
+npm run dev -- analyze genesis-kb/transcription_engine --limit 10
 npm run web:dev
+# Upload digests/genesis-kb-transcription_engine/digest.json
 ```
 
 After building, use the binary directly:
@@ -80,8 +82,8 @@ Each issue card includes a plain-English summary, normalized taxonomy, original 
 | `--limit` | Max issues to fetch | `50` |
 | `--label` | Filter by GitHub label | — |
 | `--since` | Only issues updated since (e.g. `90d`, ISO date) | — |
-| `--format` | `markdown` or `json` | `markdown` |
-| `--out` | Write to file instead of stdout only | — |
+| `--format` | Stdout format: `markdown` or `json` | `markdown` |
+| `--out-dir` | Directory for `digest.md` + `digest.json` | `digests/owner-repo/` |
 | `--model` | OpenAI model | `gpt-4o-mini` |
 | `--token` | GitHub token override | `gh` auth / `GITHUB_TOKEN` |
 | `--api-key` | OpenAI key override | `OPENAI_API_KEY` |

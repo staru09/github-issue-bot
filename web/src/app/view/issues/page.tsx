@@ -1,12 +1,12 @@
 import { DigestViewState } from "@/components/dashboard/DigestViewState";
 import { SiteHeader } from "@/components/SiteHeader";
 
-export default function ViewPage() {
+export default function IssuesPage() {
   return (
     <>
       <SiteHeader />
       <main className="flex-1">
-        <DigestViewState page="overview" />
+        <DigestViewState page="issues" />
       </main>
     </>
   );

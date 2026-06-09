@@ -1,9 +1,28 @@
 import { describe, expect, it } from "vitest";
+import {
+  defaultOutputDir,
+  outputFilePaths,
+  resolveOutputDir,
+} from "../src/output/paths.js";
 import { mapLabelsToTaxonomy, mergeTaxonomy } from "../src/classify/labelMapper.js";
 import { normalizeIssue } from "../src/classify/normalizer.js";
 import { chunkItems } from "../src/llm/provider.js";
 import { formatMarkdown } from "../src/output/formatMarkdown.js";
 import { Digest } from "../src/types/issue.js";
+
+describe("output paths", () => {
+  it("defaults to digests/owner-repo/", () => {
+    expect(defaultOutputDir("vercel/next.js")).toMatch(/digests[\\/]vercel-next\.js$/);
+    expect(resolveOutputDir("o/r", undefined)).toMatch(/digests[\\/]o-r$/);
+    expect(resolveOutputDir("o/r", "./custom")).toBe("./custom");
+  });
+
+  it("names both export files", () => {
+    const paths = outputFilePaths("digests/o-r");
+    expect(paths.markdown).toMatch(/digest\.md$/);
+    expect(paths.json).toMatch(/digest\.json$/);
+  });
+});
 
 describe("labelMapper", () => {
   it("maps common labels to taxonomy", () => {

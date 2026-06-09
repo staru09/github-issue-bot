@@ -25,8 +25,8 @@ program
   .option("--label <label>", "Filter by label")
   .option("--since <date>", "Only issues updated since date or duration (e.g. 90d)")
   .option("--token <token>", "GitHub token override (default: gh auth or GITHUB_TOKEN)")
-  .option("--format <format>", "Output format: markdown or json", "markdown")
-  .option("--out <file>", "Write output to file")
+  .option("--format <format>", "Stdout format: markdown or json", "markdown")
+  .option("--out-dir <dir>", "Output directory for digest.md and digest.json (default: digests/owner-repo/)")
   .option("--model <model>", "OpenAI model", process.env.OPENAI_MODEL ?? "gpt-4o-mini")
   .option("--api-key <key>", "OpenAI API key override")
   .action(async (repo: string, opts) => {
@@ -45,7 +45,7 @@ program
         since: opts.since,
         token: opts.token,
         format,
-        out: opts.out,
+        outDir: opts.outDir,
         model: opts.model,
         apiKey: opts.apiKey,
       });
