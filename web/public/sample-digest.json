@@ -1,0 +1,183 @@
+{
+  "meta": {
+    "repo": "genesis-kb/transcription_engine",
+    "analyzedCount": 10,
+    "generatedAt": "2026-06-09T00:00:00.000Z",
+    "dateRange": { "from": "2026-04-21", "to": "2026-05-21" }
+  },
+  "snapshot": {
+    "narrative": "The transcription_engine project has a healthy mix of issues, with a focus on improving the transcription pipeline and enhancing overall functionality. Many issues are marked as ready, making them accessible for contributors.",
+    "stats": {
+      "total": 10,
+      "workType_refactor": 3,
+      "workType_feature": 7,
+      "difficulty_unknown": 9,
+      "difficulty_easy": 1,
+      "readiness_ready": 10
+    }
+  },
+  "themes": [
+    {
+      "name": "Transcription Improvements",
+      "description": "Issues aimed at enhancing the transcription pipeline and related methodologies.",
+      "issueNumbers": [29, 26, 27, 20, 25, 12, 11, 13]
+    },
+    {
+      "name": "Error Handling Enhancements",
+      "description": "Improvements aimed at expanding the custom exception hierarchy for better error management.",
+      "issueNumbers": [20]
+    },
+    {
+      "name": "YouTube Automation",
+      "description": "Features related to automating tasks for YouTube, including commenting and summarization.",
+      "issueNumbers": [25]
+    }
+  ],
+  "shortlist": [
+    {
+      "number": 11,
+      "title": "Add transcripts for MIT Bitcoin Expo 2025",
+      "url": "https://github.com/genesis-kb/transcription_engine/issues/11",
+      "plainSummary": "Transcribe MIT Bitcoin Expo 2025 videos and save results in PostgreSQL.",
+      "pickReason": "Labeled good first issue with clear scope for new contributors.",
+      "taxonomy": {
+        "workType": "feature",
+        "difficulty": "easy",
+        "readiness": "ready",
+        "area": "general",
+        "priority": "unknown"
+      }
+    },
+    {
+      "number": 12,
+      "title": "Add Transcripts for Bitcoin MENA 2025",
+      "url": "https://github.com/genesis-kb/transcription_engine/issues/12",
+      "plainSummary": "Transcribe Bitcoin MENA 2025 event and store results in PostgreSQL.",
+      "pickReason": "Straightforward transcription task suitable for beginners.",
+      "taxonomy": {
+        "workType": "feature",
+        "difficulty": "unknown",
+        "readiness": "ready",
+        "area": "general",
+        "priority": "unknown"
+      }
+    },
+    {
+      "number": 30,
+      "title": "Update all The Upstream and Downstream Handlers/Services according to new schema",
+      "url": "https://github.com/genesis-kb/transcription_engine/issues/30",
+      "plainSummary": "Update handlers and services to align with a new schema in the current pipeline.",
+      "pickReason": "Ready issue with a defined refactor scope.",
+      "taxonomy": {
+        "workType": "refactor",
+        "difficulty": "unknown",
+        "readiness": "ready",
+        "area": "general",
+        "priority": "unknown"
+      }
+    }
+  ],
+  "catalog": {
+    "buckets": [
+      {
+        "workType": "feature",
+        "difficulty": "easy",
+        "issues": [
+          {
+            "number": 11,
+            "url": "https://github.com/genesis-kb/transcription_engine/issues/11",
+            "title": "Add transcripts for MIT Bitcoin Expo 2025",
+            "plainSummary": "Transcribe MIT Bitcoin Expo 2025 videos and save results in PostgreSQL.",
+            "taxonomy": {
+              "workType": "feature",
+              "difficulty": "easy",
+              "readiness": "ready",
+              "area": "general",
+              "priority": "unknown"
+            },
+            "githubLabels": ["good first issue"],
+            "labelMappingNotes": ["label → difficulty:easy"],
+            "confidence": "high",
+            "skillsNeeded": ["python"]
+          }
+        ]
+      },
+      {
+        "workType": "feature",
+        "difficulty": "unknown",
+        "issues": [
+          {
+            "number": 29,
+            "url": "https://github.com/genesis-kb/transcription_engine/issues/29",
+            "title": "Improving Transcription Pipeline : CoS2W Methodology",
+            "plainSummary": "Improve the transcription pipeline using CoS2W methodology for domain-specific terminology.",
+            "taxonomy": {
+              "workType": "feature",
+              "difficulty": "unknown",
+              "readiness": "ready",
+              "area": "general",
+              "priority": "unknown"
+            },
+            "githubLabels": [],
+            "labelMappingNotes": [],
+            "confidence": "high"
+          },
+          {
+            "number": 25,
+            "url": "https://github.com/genesis-kb/transcription_engine/issues/25",
+            "title": "YT Auto-Commenter",
+            "plainSummary": "Auto-commenting feature for YouTube videos after transcription and summarization.",
+            "taxonomy": {
+              "workType": "feature",
+              "difficulty": "unknown",
+              "readiness": "ready",
+              "area": "general",
+              "priority": "unknown"
+            },
+            "githubLabels": [],
+            "labelMappingNotes": [],
+            "confidence": "high"
+          }
+        ]
+      },
+      {
+        "workType": "refactor",
+        "difficulty": "unknown",
+        "issues": [
+          {
+            "number": 30,
+            "url": "https://github.com/genesis-kb/transcription_engine/issues/30",
+            "title": "Update all The Upstream and Downstream Handlers/Services according to new schema",
+            "plainSummary": "Update handlers and services to align with a new schema in the current pipeline.",
+            "taxonomy": {
+              "workType": "refactor",
+              "difficulty": "unknown",
+              "readiness": "ready",
+              "area": "general",
+              "priority": "unknown"
+            },
+            "githubLabels": [],
+            "labelMappingNotes": [],
+            "confidence": "high"
+          },
+          {
+            "number": 26,
+            "url": "https://github.com/genesis-kb/transcription_engine/issues/26",
+            "title": "ENH: Update Database Schema for the project",
+            "plainSummary": "Update database schema to accommodate more sources and downstream applications.",
+            "taxonomy": {
+              "workType": "refactor",
+              "difficulty": "unknown",
+              "readiness": "ready",
+              "area": "general",
+              "priority": "unknown"
+            },
+            "githubLabels": [],
+            "labelMappingNotes": [],
+            "confidence": "high"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+/* GitHub-inspired palette + RetroUI brutalist shadows */
+:root {
+  --background: #ffffff;
+  --foreground: #1f2328;
+  --muted: #f6f8fa;
+  --muted-foreground: #656d76;
+  --border: #d0d7de;
+  --primary: #1f883d;
+  --primary-hover: #1a7f37;
+  --primary-foreground: #ffffff;
+  --secondary: #f6f8fa;
+  --secondary-hover: #eef1f4;
+  --secondary-foreground: #1f2328;
+  --accent: #0969da;
+  --accent-foreground: #ffffff;
+  --accent-subtle: #ddf4ff;
+  --danger: #cf222e;
+  --danger-subtle: #ffebe9;
+  --warning: #9a6700;
+  --warning-subtle: #fff8c5;
+  --success: #1a7f37;
+  --success-subtle: #dafbe1;
+  --purple: #8250df;
+  --purple-subtle: #fbefff;
+  --card: #ffffff;
+  --shadow: #1f232820;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-hover: var(--secondary-hover);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent-subtle: var(--accent-subtle);
+  --color-danger: var(--danger);
+  --color-danger-subtle: var(--danger-subtle);
+  --color-warning: var(--warning);
+  --color-warning-subtle: var(--warning-subtle);
+  --color-success: var(--success);
+  --color-success-subtle: var(--success-subtle);
+  --color-purple: var(--purple);
+  --color-purple-subtle: var(--purple-subtle);
+  --color-card: var(--card);
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
+
+/* RetroUI-style focus ring using GitHub accent */
+*:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}

@@ -32,8 +32,27 @@ npm run dev -- analyze vercel/next.js --limit 10 --label "good first issue"
 # Save markdown digest to file
 npm run dev -- analyze vercel/next.js --limit 20 --out digest.md
 
-# JSON output for tooling
-npm run dev -- analyze vercel/next.js --limit 10 --format json
+# JSON output for dashboard
+npm run dev -- analyze vercel/next.js --limit 10 --format json --out digest.json
+```
+
+## Web dashboard
+
+A [RetroUI](https://retroui.dev)-styled dashboard with GitHub-like colors visualizes digest JSON.
+
+```bash
+# From repo root
+npm run web:dev
+
+# Open http://localhost:3000
+# Upload digest.json or click "View sample digest"
+```
+
+Generate JSON from the CLI, then upload it in the dashboard:
+
+```bash
+npm run dev -- analyze genesis-kb/transcription_engine --limit 10 --format json --out digest.json
+npm run web:dev
 ```
 
 After building, use the binary directly:
