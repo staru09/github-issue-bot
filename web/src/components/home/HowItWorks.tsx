@@ -28,14 +28,8 @@ export function HowItWorks() {
         </h2>
 
         <div className="grid gap-8 md:grid-cols-3">
-          {steps.map((s, i) => (
-            <div key={s.step} className="relative">
-              {i < steps.length - 1 && (
-                <div
-                  className="absolute left-[calc(50%+2rem)] top-10 hidden h-[3px] w-[calc(100%-4rem)] bg-border md:block"
-                  aria-hidden
-                />
-              )}
+          {steps.map((s) => (
+            <div key={s.step}>
               <div className="neo-card rounded-xl border-[3px] border-border bg-card p-6 text-center">
                 <div
                   className={`mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full border-[3px] border-border text-2xl font-black shadow-[4px_4px_0_0_var(--border)] ${s.color}`}

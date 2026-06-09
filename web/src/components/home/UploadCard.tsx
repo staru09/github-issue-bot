@@ -38,11 +38,6 @@ export function UploadCard({ className }: { className?: string }) {
         </div>
         <div>
           <h3 className="text-lg font-bold">Drop your digest</h3>
-          <p className="text-sm text-muted-foreground">
-            <code className="rounded border border-border bg-muted px-1.5 py-0.5 text-xs">
-              digests/owner-repo/digest.json
-            </code>
-          </p>
         </div>
       </div>
 

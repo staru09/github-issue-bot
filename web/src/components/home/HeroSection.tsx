@@ -4,7 +4,7 @@ import Link from "next/link";
 import { HeroPreview } from "@/components/home/HeroPreview";
 import { buttonVariants } from "@/components/retroui/Button";
 import { cn } from "@/lib/utils";
-import { ArrowRight, Terminal, Zap } from "lucide-react";
+import { ArrowRight, Terminal } from "lucide-react";
 
 export function HeroSection() {
   return (
@@ -21,11 +21,6 @@ export function HeroSection() {
 
       <div className="relative mx-auto grid max-w-6xl gap-12 px-4 py-16 md:py-24 lg:grid-cols-2 lg:items-center lg:gap-16">
         <div className="space-y-8">
-          <div className="inline-flex items-center gap-2 rounded-full border-2 border-border bg-card px-4 py-1.5 text-xs font-bold uppercase tracking-widest shadow-[3px_3px_0_0_var(--border)]">
-            <Zap className="h-3.5 w-3.5 text-warning" />
-            Neo-brutalist issue intelligence
-          </div>
-
           <div className="space-y-4">
             <h1 className="hero-title text-4xl font-black leading-[1.05] tracking-tight text-foreground sm:text-5xl lg:text-6xl">
               Stop scrolling.
@@ -61,7 +56,7 @@ export function HeroSection() {
               One command
             </div>
             <code className="block font-mono text-xs leading-relaxed text-foreground sm:text-sm">
-              npm run dev -- analyze owner/repo --limit 10
+              npm run dev -- analyze vercel/next.js --limit 20
             </code>
           </div>
         </div>

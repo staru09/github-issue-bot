@@ -3,30 +3,24 @@ import { Badge } from "@/components/retroui/Badge";
 export function HeroPreview() {
   return (
     <div className="relative mx-auto w-full max-w-md lg:max-w-none">
-      {/* Floating sticker */}
-      <div className="neo-sticker absolute -left-4 top-8 z-20 hidden rotate-[-8deg] border-[3px] border-border bg-warning-subtle px-4 py-2 text-sm font-bold text-warning shadow-[4px_4px_0_0_var(--border)] sm:block">
-        AI-Powered ✦
-      </div>
-
-      {/* Main preview card */}
       <div className="neo-card relative z-10 rotate-1 rounded-xl border-[3px] border-border bg-card p-5 shadow-[8px_8px_0_0_var(--border)]">
         <div className="mb-4 flex items-center justify-between border-b-2 border-border pb-3">
           <span className="font-mono text-xs font-bold text-accent">
-            genesis-kb/transcription_engine
+            vercel/next.js
           </span>
-          <Badge variant="open">10 issues</Badge>
+          <Badge variant="open">20 issues</Badge>
         </div>
 
         <p className="mb-4 text-sm leading-relaxed text-muted-foreground">
-          Healthy mix of features and refactors. Most issues are ready for
-          contributors to pick up.
+          Active docs and bug-fix work across routing and build tooling.
+          Several issues are tagged for new contributors.
         </p>
 
         <div className="mb-4 grid grid-cols-3 gap-2">
           {[
-            { label: "features", value: 7, color: "bg-success-subtle text-success" },
-            { label: "refactors", value: 3, color: "bg-purple-subtle text-purple" },
-            { label: "easy", value: 1, color: "bg-accent-subtle text-accent" },
+            { label: "bugs", value: 8, color: "bg-danger-subtle text-danger" },
+            { label: "docs", value: 6, color: "bg-accent-subtle text-accent" },
+            { label: "easy", value: 4, color: "bg-success-subtle text-success" },
           ].map((stat) => (
             <div
               key={stat.label}
@@ -45,8 +39,8 @@ export function HeroPreview() {
             Start here
           </p>
           {[
-            { n: 11, title: "MIT Bitcoin Expo transcripts", tag: "easy" },
-            { n: 12, title: "Bitcoin MENA 2025", tag: "ready" },
+            { n: 142, title: "Fix broken link in docs", tag: "easy" },
+            { n: 89, title: "Add example for middleware", tag: "ready" },
           ].map((item) => (
             <div
               key={item.n}
@@ -62,7 +56,6 @@ export function HeroPreview() {
         </div>
       </div>
 
-      {/* Back card depth */}
       <div
         className="absolute -right-3 top-6 -z-10 h-full w-full rotate-[-4deg] rounded-xl border-[3px] border-border bg-muted"
         aria-hidden
